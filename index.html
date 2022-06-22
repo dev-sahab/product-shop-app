@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>MERN Project</title>
+
+    <link rel="shortcut icon" href="./assets/img/shahab.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+
+    <section>
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="card shadow card-wrapper">
+                        <div class="card-header py-3 px-4">
+                            <div class="header-wrapper d-flex justify-content-between">
+                                <h2>Shop App</h2>
+                                <button href="#shop_modal" data-bs-toggle="modal" class="btn btn-primary">Add New Product</button>
+                            </div>
+                        </div>
+                        <div class="card-body-wrapper">
+                            <table class="table table-striped shop-table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">#</th>
+                                        <th>Product Photo</th>
+                                        <th>Product Name</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+    
+                                <tbody id="product_list"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Product Add modal -->
+    <section>
+        <div id="shop_modal" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Add New Product</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="msg"></div>
+                        <form action="" id="add_product_form">
+                            <div class="my-3">
+                                <label>Name</label>
+                                <input class="form-control mt-2" type="text" name="name" placeholder="Product Name">
+                            </div>
+                            <div class="my-3">
+                                <label>Price</label>
+                                <input class="form-control mt-2" type="text" name="price" placeholder="Product Price">
+                            </div>
+                            <div class="my-3">
+                                <label>Quantity</label>
+                                <input class="form-control mt-2" type="text" name="quantity"  placeholder="Product Quantity">
+                            </div>
+                            <div class="my-3">
+                                <label>Photo</label>
+                                <input class="form-control mt-2" type="text" name="photo" placeholder="Product Photo URL">
+                            </div>
+                            <div class="mt-4">
+                                <input class="btn btn-primary w-100" type="submit" name="submit" value="Add New">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Single Product show modal -->
+    <section>
+        <div id="shop_single_modal" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="single_product"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Product Edit modal -->
+        <section>
+            <div id="edit_modal" class="modal fade">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>Add New Product</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="update_msg"></div>
+                            <form id="product_update_form"></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Main JS -->
+    <script src="./js/functions.js"></script>
+    <script src="./js/app.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+        
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+img{
+    max-width: 100%;
+}
+.shop-table tr{
+    vertical-align: middle;
+}
+.shop-table tr img{
+    width: 60px; 
+    height: 60px; 
+    object-fit: cover;
+    border-radius: 6px;
+}
+.card-wrapper h2{
+    /* padding: 20px 30px 0; */
+    margin-bottom: 0;
+}
+.modal-header h2 {
+	margin-bottom: 0;
+}
+
+.card-body-wrapper {
+	padding-left: 0;
+	padding-right: 0;
+}
+.single_product{
+    text-align: center;
+}
+.single_product img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #bbbbbb;
+    margin-bottom: 1.2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+i{
+    pointer-events: none;
+}
