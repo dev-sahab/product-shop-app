@@ -20,9 +20,13 @@ const getAllProducts = () => {
     // get all LS Data
     const data = readLSdata('product');
 
+    
+    // init val
+    let list = '';
+
     // Check LS data exist
-    if ( !data ) {
-        productList.innerHTML = `
+    if ( !data || data.length == 0) {
+        list = `
             <tr>
                 <td colspan="7" class='text-center'>No Product Data Found</td>
             </tr>
@@ -30,10 +34,8 @@ const getAllProducts = () => {
     }
 
     // show all data to list
-    if ( data ) {
+    if ( data && data.length > 0) {
 
-        // init val
-        let list = '';
         let total_amount = 0;
         // loop for data
         data.map((item, index) => {
@@ -64,9 +66,11 @@ const getAllProducts = () => {
                 <td></td>
             </tr>
         `
-        // now inner HTML to product list
-        productList.innerHTML = list;
+
     }
+
+            // now inner HTML to product list
+            productList.innerHTML = list;
 
 }
 
@@ -201,9 +205,11 @@ product_update_form.onsubmit = (e) => {
 
     // get all data
     let allData = readLSdata('product');
-        
+
 
     allData[index] = {name, price, quantity, photo};
+
+    console.log(allData);
 
     // udate data
     updateLSdata('product', allData);
